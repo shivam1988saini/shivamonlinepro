@@ -25,9 +25,17 @@ import AdminCustomerDetail from "./AdminCustomerDetail";
 import AdminOrderHistoryPage from "./AdminOrderHistoryPage";
 import ProtectedRoute from "./ProtectedRoute";
 import { ToastContainer } from 'react-toastify';
-function App() 
+import { useSelector, useDispatch } from 'react-redux';
+//import { someAction } from './redux/actions';
 
-{
+const App = () => {
+const state = useSelector((state) => state);
+const dispatch = useDispatch();
+
+const handleAction = () => {
+   // dispatch(someAction());
+};
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" }); // Instant scroll without smoothness
   }, []);
